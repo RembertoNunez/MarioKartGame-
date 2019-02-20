@@ -12,11 +12,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var kartViewMario: UIImageView!
     @IBOutlet weak var kartViewBawser: UIImageView!
-      @IBOutlet weak var kartViewToad: UIImageView!
+    @IBOutlet weak var kartViewToad: UIImageView!
+    @IBOutlet weak var kartViewWario: UIImageView!
+    @IBOutlet weak var kartVewLuigi: UIImageView!
     
     var startingPointKartViewMario = CGPoint()
     var startingPointKartViewToad = CGPoint()
     var startingPointKartViewBawser = CGPoint()
+    var startingPointKartViewWario = CGPoint()
+    var startingPointKartViewLuigi = CGPoint()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,8 @@ class ViewController: UIViewController {
         startingPointKartViewMario = kartViewMario.center
         startingPointKartViewToad = kartViewToad.center
         startingPointKartViewBawser = kartViewBawser.center
+        startingPointKartViewWario = kartViewWario.center
+        startingPointKartViewLuigi = kartVewLuigi.center
         
     }
     
@@ -79,10 +85,14 @@ class ViewController: UIViewController {
             self.kartViewMario.center = self.startingPointKartViewMario
             self.kartViewToad.center = self.startingPointKartViewToad
             self.kartViewBawser.center = self.startingPointKartViewBawser
+            self.kartVewLuigi.center = self.startingPointKartViewLuigi
+            self.kartViewWario.center = self.startingPointKartViewWario
             
             self.kartViewMario.transform = CGAffineTransform.identity
             self.kartViewToad.transform = CGAffineTransform.identity
             self.kartViewBawser.transform = CGAffineTransform.identity
+            self.kartVewLuigi.transform = CGAffineTransform.identity
+            self.kartViewWario.transform = CGAffineTransform.identity
         }
     }
     

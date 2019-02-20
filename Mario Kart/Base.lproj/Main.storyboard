@@ -27,7 +27,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kart_1" translatesAutoresizingMaskIntoConstraints="NO" id="zqz-JU-Obm">
-                                <rect key="frame" x="16" y="414" width="140" height="140"/>
+                                <rect key="frame" x="16" y="570" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -38,7 +38,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kart_2" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-oT-tVu">
-                                <rect key="frame" x="219" y="414" width="140" height="140"/>
+                                <rect key="frame" x="16" y="462" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -49,7 +49,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kart_0" translatesAutoresizingMaskIntoConstraints="NO" id="fln-8W-pRQ">
-                                <rect key="frame" x="117" y="562" width="140" height="140"/>
+                                <rect key="frame" x="16" y="678" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -59,14 +59,38 @@
                                     <outletCollection property="gestureRecognizers" destination="6kt-zm-qZc" appends="YES" id="gdV-7E-0he"/>
                                 </connections>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kart_3" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-fo-TuU">
+                                <rect key="frame" x="16" y="354" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QsN-e0-QKQ" appends="YES" id="hUj-R3-P6h"/>
+                                    <outletCollection property="gestureRecognizers" destination="Iai-ng-lVa" appends="YES" id="dt2-Xb-ZzK"/>
+                                    <outletCollection property="gestureRecognizers" destination="vpy-ED-kK6" appends="YES" id="6K3-ey-gCk"/>
+                                    <outletCollection property="gestureRecognizers" destination="wFS-Us-OO7" appends="YES" id="8yU-Id-G08"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="kart_4" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-j9-yWC">
+                                <rect key="frame" x="16" y="246" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6VF-9l-Eeu" appends="YES" id="8SY-JU-Xoa"/>
+                                    <outletCollection property="gestureRecognizers" destination="sve-kx-6Vu" appends="YES" id="jqC-AM-Fhn"/>
+                                    <outletCollection property="gestureRecognizers" destination="yoG-v4-KCO" appends="YES" id="MmE-uV-eof"/>
+                                    <outletCollection property="gestureRecognizers" destination="oP5-ue-k8w" appends="YES" id="RJD-8i-qbt"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="kartVewLuigi" destination="vC1-j9-yWC" id="7pH-8h-6QK"/>
                         <outlet property="kartViewBawser" destination="fln-8W-pRQ" id="vb8-3o-Xw8"/>
                         <outlet property="kartViewMario" destination="zqz-JU-Obm" id="bb3-cD-23n"/>
                         <outlet property="kartViewToad" destination="wRa-oT-tVu" id="eFw-Fu-RMu"/>
+                        <outlet property="kartViewWario" destination="HNn-fo-TuU" id="trX-Na-4mF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,6 +109,16 @@
                         <action selector="didPanKartView:" destination="BYZ-38-t0r" id="u2T-9a-Vzr"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6VF-9l-Eeu" userLabel="Pan Gesture Recognizer Luigi">
+                    <connections>
+                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="ygr-jp-ud2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QsN-e0-QKQ" userLabel="Pan Gesture Recognizer Wario">
+                    <connections>
+                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="Cfr-YU-gsg"/>
+                    </connections>
+                </panGestureRecognizer>
                 <pinchGestureRecognizer id="6Vt-ic-JbM" userLabel="Pinch Gesture Recognizer Mario">
                     <connections>
                         <action selector="didPinchKart:" destination="BYZ-38-t0r" id="xI7-bW-Yuu"/>
@@ -98,6 +132,16 @@
                 <pinchGestureRecognizer id="h1E-9H-L2b" userLabel="Pinch Gesture Recognizer Bawser">
                     <connections>
                         <action selector="didPinchKart:" destination="BYZ-38-t0r" id="xRH-z6-i9a"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="Iai-ng-lVa" userLabel="Pinch Gesture Recognizer Wario">
+                    <connections>
+                        <action selector="didPinchKart:" destination="BYZ-38-t0r" id="7gs-5h-0XP"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="sve-kx-6Vu" userLabel="Pinch Gesture Recognizer Luigi">
+                    <connections>
+                        <action selector="didPinchKart:" destination="BYZ-38-t0r" id="wGD-Mt-eaU"/>
                     </connections>
                 </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="lCy-r6-Gn0" userLabel="Rotation Gesture Recognizer Mario">
@@ -115,6 +159,16 @@
                         <action selector="didRotationKart:" destination="BYZ-38-t0r" id="8ax-ed-uoX"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="yoG-v4-KCO" userLabel="Rotation Gesture Recognizer Luigi">
+                    <connections>
+                        <action selector="didRotationKart:" destination="BYZ-38-t0r" id="CAO-vu-O2j"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="vpy-ED-kK6" userLabel="Rotation Gesture Recognizer Wario">
+                    <connections>
+                        <action selector="didRotationKart:" destination="BYZ-38-t0r" id="vX3-gZ-rXK"/>
+                    </connections>
+                </rotationGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="qlm-vg-reG" userLabel="Tap Gesture Recognizer Mario">
                     <connections>
                         <action selector="didTapKart:" destination="BYZ-38-t0r" id="37j-PV-l0m"/>
@@ -130,6 +184,16 @@
                         <action selector="didTapKart:" destination="BYZ-38-t0r" id="4hT-Xx-fN0"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="oP5-ue-k8w" userLabel="Tap Gesture Recognizer Luigi">
+                    <connections>
+                        <action selector="didTapKart:" destination="BYZ-38-t0r" id="JOi-KE-Xyn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="wFS-Us-OO7" userLabel="Tap Gesture Recognizer Wario">
+                    <connections>
+                        <action selector="didTapKart:" destination="BYZ-38-t0r" id="SsH-wY-G21"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="hwp-bZ-cig">
                     <connections>
                         <action selector="didLongPressBackground:" destination="BYZ-38-t0r" id="GcS-HZ-XhY"/>
@@ -143,5 +207,7 @@
         <image name="kart_0" width="340" height="340"/>
         <image name="kart_1" width="340" height="340"/>
         <image name="kart_2" width="340" height="340"/>
+        <image name="kart_3" width="340" height="340"/>
+        <image name="kart_4" width="340" height="340"/>
     </resources>
 </document>
